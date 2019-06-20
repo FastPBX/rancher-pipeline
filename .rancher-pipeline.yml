@@ -5,5 +5,10 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: sample/app:v1
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
 timeout: 60
+branch: {}
 notification: {}
